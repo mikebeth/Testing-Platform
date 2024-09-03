@@ -3,7 +3,7 @@ tTotalTime = tic; %
 
 % Seleccion del algoritmo y la funcion
 Select_algorithm = 1;
-Select_function  = 1;
+Select_function  = 3;
 
 % Cargar la funcion
 switch Select_function
@@ -11,6 +11,18 @@ switch Select_function
         addpath('functions');  
         loadRosenParameters; % Cargar los parametros
         funcion = Rosenbrock(rosenParameters.a, rosenParameters.b);
+              
+    case 2
+        addpath('functions');  
+        loadGriewankParameters; % Cargar los parametros
+        funcion = Griewank(griewankParameters.a, griewankParameters.b);
+        
+        
+    case 3
+        addpath('functions');  
+        loadTrigonometricParameters; % Cargar los parametros
+        funcion = Trigonometric(trigonometricParameters.amplitude, trigonometricParameters.frequency);
+        
     otherwise
         fprintf(1, 'No funcion selected\n');
 end

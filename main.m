@@ -3,7 +3,7 @@ tTotalTime = tic; %
 
 % Seleccion del algoritmo y la funcion
 Select_algorithm = 1;
-Select_function  = 3;
+Select_function  = 1;
 
 % Cargar la funcion
 switch Select_function

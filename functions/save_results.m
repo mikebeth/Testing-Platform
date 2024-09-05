@@ -18,7 +18,7 @@ function save_results(ResDB)
 
     % Obtener el numero de ejecuciones
     numRuns = length(ResDB);
-
+    
     % Inicializar arreglos para las tablas
     timeSpent = zeros(numRuns, 1);
     fitness = cell(numRuns, 1);
@@ -56,16 +56,16 @@ function save_results(ResDB)
 
     % Crear tabla de tiempo
     Table_Time = table(timeSpent, 'VariableNames', {'timeSpent'});
-    Table_Time.Properties.RowNames = strcat('Run ', string(1:numRuns));
+    %Table_Time.Properties.RowNames =   strcat('Run ', string(1:numRuns));
 
     % Crear tabla de fitness
     Table_Fitness = table(fitness, 'VariableNames', {'fitness'});
-    Table_Fitness.Properties.RowNames = strcat('Run ', string(1:numRuns));
+    %Table_Fitness.Properties.RowNames = strcat('Run ', string(1:numRuns));
 
     % Crear tabla de resultados
     Table_Results = table(OF, penalties, avgConvergenceRate, ...
                           'VariableNames', {'OF', 'Penalties', 'avgConvergenceRate'});
-    Table_Results.Properties.RowNames = strcat('Run ', string(1:numRuns));
+    %Table_Results.Properties.RowNames = strcat('Run ', string(1:numRuns));
 
     % Calcular estadisticas de prueba
     PstdOF = std(OF); % Desviacion estandar de la funcion objetivo
@@ -76,7 +76,7 @@ function save_results(ResDB)
 
     Table_TrialStats = table(mean(OF), PstdOF, PminOF, PmaxOF, PvarOF, AvgTime, ...
                               'VariableNames', {'RankingIndex', 'PstdOF', 'PminOF', 'PmaxOF', 'PvarOF', 'AvgTime'});
-    Table_TrialStats.Properties.RowNames = {'Overall Stats'};
+    %Table_TrialStats.Properties.RowNames = {'Overall Stats'};
 
     % Imprimir las tablas
     disp('Table_Time =');

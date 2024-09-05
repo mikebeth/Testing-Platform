@@ -38,7 +38,7 @@ switch Select_algorithm
         fprintf(1, 'No algorithm selected\n');
 end
 
-noRuns = 1; 
+noRuns = 10; 
 ResDB = struct([]); 
 
 for iRuns = 1:noRuns
@@ -57,6 +57,7 @@ for iRuns = 1:noRuns
     ResDB(iRuns).tOpt = toc(tOpt); % Tiempo de cada prueba
 end
 
+fprintf(ResDB)
 tTotalTime = toc(tTotalTime); % Tiempo total
-save_results(ResDB);
+save_results(ResDB); 
 

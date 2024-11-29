@@ -27,8 +27,8 @@
 VIEDAParameters = struct();
 VIEDAParameters.I_NP = 50;  % Population size
 VIEDAParameters.I_itermax = 1000;  % Maximum number of iterations
-VIEDAParameters.low_habitat_limit = [-5, -5];  % Lower bounds for x1 and x2
-VIEDAParameters.up_habitat_limit = [10, 10];  % Upper bounds for x1 and x2
+VIEDAParameters.low_habitat_limit = [1, 2000];  % Lower bounds for x1 and x2
+VIEDAParameters.up_habitat_limit = [35, 20000];  % Upper bounds for x1 and x2
 VIEDAParameters.Sub_Pop = 5;  % Number of sub-populations
 VIEDAParameters.Sub_Pop_Size = 10;  % Size of each sub-population
 VIEDAParameters.Elitist_Selection = 10;  % Number of elite individuals

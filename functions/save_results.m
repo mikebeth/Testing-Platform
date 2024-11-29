@@ -55,21 +55,18 @@ function save_results(ResDB)
     end
 
     % Crear tabla de tiempo
-    Table_Time = table(timeSpent, 'VariableNames', {'timeSpent'});   
-    rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
-    Table_Time.Properties.RowNames = rowNames;
+    Table_Time = table(timeSpent, 'VariableNames', {'timeSpent'});
+    Table_Time.Properties.RowNames = strcat('Run ', string(1:numRuns));
 
     % Crear tabla de fitness
     Table_Fitness = table(fitness, 'VariableNames', {'fitness'});
-    rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
-    Table_Fitness.Properties.RowNames = rowNames;
+    Table_Fitness.Properties.RowNames = strcat('Run ', string(1:numRuns));
 
 
     % Crear tabla de resultados
     Table_Results = table(OF, penalties, avgConvergenceRate, ...
                           'VariableNames', {'OF', 'Penalties', 'avgConvergenceRate'});
-    rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
-    Table_Results.Properties.RowNames = rowNames;
+    Table_Results.Properties.RowNames = strcat('Run ', string(1:numRuns));
 
 
     % Calcular estadisticas de prueba

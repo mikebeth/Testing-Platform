@@ -1,0 +1,2 @@
+Row	OF	Penalties	avgConvergenceRate
+Run1	2.01926125459329e-06	0	0.000414982722339051

@@ -55,14 +55,6 @@ function save_results(ResDB)
     end
 
     % Crear tabla de tiempo
-<<<<<<< HEAD
-    Table_Time = table(timeSpent, 'VariableNames', {'timeSpent'});
-    %Table_Time.Properties.RowNames =   strcat('Run ', string(1:numRuns));
-
-    % Crear tabla de fitness
-    Table_Fitness = table(fitness, 'VariableNames', {'fitness'});
-    %Table_Fitness.Properties.RowNames = strcat('Run ', string(1:numRuns));
-=======
     Table_Time = table(timeSpent, 'VariableNames', {'timeSpent'});   
     rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
     Table_Time.Properties.RowNames = rowNames;
@@ -71,17 +63,14 @@ function save_results(ResDB)
     Table_Fitness = table(fitness, 'VariableNames', {'fitness'});
     rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
     Table_Fitness.Properties.RowNames = rowNames;
->>>>>>> 6999a068d14c86c9f7fbd3411152c19596175024
+
 
     % Crear tabla de resultados
     Table_Results = table(OF, penalties, avgConvergenceRate, ...
                           'VariableNames', {'OF', 'Penalties', 'avgConvergenceRate'});
-<<<<<<< HEAD
-    %Table_Results.Properties.RowNames = strcat('Run ', string(1:numRuns));
-=======
     rowNames = strcat('Run ', cellstr(num2str((1:numRuns)'))); % Convertir a cell array
     Table_Results.Properties.RowNames = rowNames;
->>>>>>> 6999a068d14c86c9f7fbd3411152c19596175024
+
 
     % Calcular estadisticas de prueba
     PstdOF = std(OF); % Desviacion estandar de la funcion objetivo
